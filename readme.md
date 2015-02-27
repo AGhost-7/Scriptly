@@ -48,7 +48,11 @@ SqlConnection(sqlUri){ implicit con =>
 
 Writer class:
 ```scala
-Writer("greet.txt") { put =>
+// you can even curry these.
+val writer = Writer("greet.txt") _
+
+// autoclosing, just like SqlConnection
+writer { put =>
 	put("Hello!")
 }
 ```
