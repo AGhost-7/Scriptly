@@ -1,4 +1,5 @@
-Just a couple of utility classes for writing short applications.
+Just a couple of utility classes for writing short applications, mainly revolving 
+around wrapping the Java api which isn't covered by the Scala standard.
 
 SqlConnection object:
 ```scala
