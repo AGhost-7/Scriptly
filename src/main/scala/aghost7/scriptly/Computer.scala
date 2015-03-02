@@ -1,3 +1,4 @@
+package aghost7.scriptly
 
 import java.io.File
 

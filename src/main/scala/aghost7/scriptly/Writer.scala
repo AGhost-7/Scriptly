@@ -2,11 +2,12 @@ package aghost7.scriptly
 import java.io._
 import scala.util._
 
-class Writer(pw: PrintWriter) {
-	def apply(str: String) = pw.println(str)
-	def apply(any: Any) = pw.println(any)
-	def print(str: String) = pw.print(str)
-	def print(any: Any) = pw.print(any)
+class Writer(val printWriter: PrintWriter) {
+	def apply(str: String) = printWriter.println(str)
+	def apply(any: Any) = printWriter.println(any)
+	def print(str: String) = printWriter.print(str)
+	def print(any: Any) = printWriter.print(any)
+	def apply(ex: Throwable) = ex.printStackTrace(printWriter)
 }
 
 object Writer {
